@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Employee Reimbursement System</title>
+		
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<style>
+		form {
+			margin: 0 auto;
+			width: 500px;
+			padding: 1em;
+			border: 1px solid #CCC;
+			border-radius: 1em;
+		  }
+		  
+		  ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		  }
+		  
+		  form li + li {
+			margin-top: 1em;
+		  }
+		  
+		  label {
+			display: inline-block;
+			width: 90px;
+			text-align: right;
+		  }
+		  
+		  input,
+		  textarea {
+			font: 1em sans-serif;
+		  	width: 300px;
+			box-sizing: border-box;
+		  	border: 1px solid #999;
+		  }
+		  
+		  input:focus,
+		  textarea:focus {
+		  border-color: #000; 
+		  }
+		  
+		  textarea {
+			vertical-align: top;
+		  	height: 5em;
+		  }
+		  
+		  .button {
+			padding-left: 90px;
+		  }
+		  
+		  button {
+			margin-left: .5em;
+		  }
+		</style>  
+
+	</head>
+	<body style="background-color: lightgrey;">
+         <div class="container">
+            
+			<br>
+			<center><h3>Welcome to the Reimbursment Employee Dashboard!</h3></center>
+             
+			<br>
+			<br>
+		
+			<div id="table-row" class="row">
+				<table id="UsersTable" class="table table-hover table-bordered table-dark">
+					<thead>
+						<tr>
+							<th>User_id</th>
+							<th>Username</th>
+							<th>Password</th>
+							<th>First_name</th>
+							<th>Last_name</th>
+							<th>Email</th>
+							<th>User_role_id</th>
+						</tr>
+					</thead>
+					<tbody id="UsersBody">
+						<!--We'll leave this blank: it will be filled by our JS when data comes in-->
+					</tbody>
+				</table>
+			</div>
+
+			<br />
+			
+			<button id="getUsersButton" class="btn btn-primary">Show Employees</button>
+			<button id="getUsersbyuser_idButton" class="btn btn-primary">Show Employee by ID</button>
+		</div>
+
+		<br>
+		<center><h5>Please fill your reimbursement application form</h5></center>
+		<form action="/my-handling-form-page" method="post">
+			<ul>
+			 <li>
+				<label for="name">First Name:</label>
+				<input type="text" id="name" name="first_name" />
+			 </li>
+			 <li>
+				<label for="name">Last Name:</label>
+				<input type="text" id="name" name="last_name" />
+			 </li>
+			 <li>
+			   <label for="mail">E-mail:</label>
+			   <input type="email" id="mail" name="user_email" />
+			 </li>
+			 <li>
+				<label for="role id">Role ID:</label>
+				<input type="text" id="name" name="user_role_id" />
+			 </li>
+			 <li>
+				<label for="type id">Reimb. Type ID:</label>
+				<input type="text" id="name" name="remib_type_id" />
+			 </li>
+			 <li>
+				<label for="amounts">Amount:</label>
+				<input type="text" id="name" name="amount" />
+			 </li>
+			 <li class="button">
+				<button type="submit">Submit</button>
+			 </li>
+			
+		   
+		<!-- 		
+		<h5>Reimbursement Application Forms</h5>
+        <div class ="row" style = "position:fixed; left:80px; top:320px; background-color: white;">
+    
+	   	  <form action="/action_page.php">
+       		 <label for="fname">First name:</label><br>
+      		 <input type="text" id="fname" name="fname"><br>
+        	 <label for="lname">Last name:</label><br>
+       		 <input type="text" id="lname" name="lname"><br><br>
+       		 <label for="remib_type">Reimbursement Type:</label><br>
+       		 <input type="text" id="remib_type_" name="remib_type_"><br>
+      		 <label for="remib_type_">Amount:</label><br>
+             <input type="text" id="amount" name="amount"><br>
+             <input type="submit" value="Submit">
+         </form> 
+
+	    </div>
+		-->
+	</div>
+
+		<script src="ERS_page3_employee.js"></script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+           
